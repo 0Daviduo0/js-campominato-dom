@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --DEBUG-borders: black solid 1px;
+    --text-color: #fff;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+    header{
+        width: 100%;
+        height: 10%;
+        background-color: #5E68C2;
+        outline: var(--DEBUG-borders);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+        .title{
+            color: var(--text-color);
+            font-size: 40px;
+
+            display: flex;
+            align-items: center;
+        }
+
+            .logo{
+                font-size: 50px;
+                padding-right: 10px;
+            }
+        
+        .settings_start{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+            #settings_start{
+                display: flex;
+                align-items: center;
+            }
+
+                .difficulty{
+                    display: flex;
+                    flex-direction: column;
+                    padding-right: 30px;
+                }
+
+                #difficulty_label{
+                    color: var(--text-color);
+                }
+
+                #difficulty{
+                    padding: 3px;
+                    margin-top: 10px;
+                    background-color: rgba(255, 255, 255, 0.471);
+                    border-radius: 10px;
+                    border: none;
+                }
+
+                #play_button{
+                    padding: 15px 20px;
+                    font-size: 15px;
+                    border-radius: 15px;
+                    background-color: rgba(255, 255, 255, 0.471);
+                    border-radius: 10px;
+                }
+
+    main{
+        width: 100%;
+        height: 85%;
+        background-color: #454c8f;
+        outline: var(--DEBUG-borders);
+        display: flex;
+        justify-content: center;
+
+    }
+
+        .grid_container{
+            width: 800px;
+            margin: 50px 0;
+            display: grid;
+            outline: var(--DEBUG-borders);
+        }
+            
+            .griglia_facile{
+                grid-template-columns: repeat(auto-fill,calc(100% / 10));
+            }
+
+            .griglia_normale{
+                display: grid;
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(9, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+            }
+
+            .griglia_difficile{
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: repeat(7, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+            }
+
+        .grid_item{
+            outline: var(--DEBUG-borders);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+
+            .selezionata{
+                color: var(--text-color);
+                background-color: aqua;
+            }
+
+    footer{
+        width: 100%;
+        height: 5%;
+        background-color: #2c305c;
+        outline: var(--DEBUG-borders);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-color);
+    }
