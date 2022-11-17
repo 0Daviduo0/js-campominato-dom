@@ -32,6 +32,27 @@ playButton.addEventListener("click", function generaGriglia() {
                 gridItem.addEventListener("click", function selezionata(){
                     this.classList.toggle("selezionata")
                     console.log("cella selezionata:", i)
+
+                    if (this.classList.contains("bomb")){
+                        this.classList.add("esplosa");
+                        
+
+                        
+                        const bombe = document.querySelectorAll('.bomb');
+                        console.log("queste sono le bombe", bombe)
+                        
+                            for (const bomb of bombe) {
+                            bomb.classList.add('esplosa');
+                            }
+
+                        let punteggio = document.querySelectorAll('.selezionata').length - 1;
+                        console.log("hai totalizzato:" + punteggio + "punti");
+
+                        alert(`hai totalizzato: ${punteggio} punti`);
+                        window.location.reload();
+
+                    }
+
                 })
 
                 gridItem.className = "grid_item";
@@ -41,6 +62,23 @@ playButton.addEventListener("click", function generaGriglia() {
 
                 contenitoreGriglia.appendChild(gridItem)
 
+            }
+
+            let celleArray = document.getElementsByClassName("grid_item");
+            console.log(celleArray);
+
+            for (let j = 1; j <= celleArray.length; j++){
+            celleArray.value = [j]
+            }
+            
+            for (let i = 1; i <= 16; i++){
+            var randomItem = celleArray[Math.floor(Math.random()* celleArray.length)];
+            var text  = randomItem.textContent || randomItem.innerText;
+            console.log(text);
+
+            randomItem.classList.add("bomb");
+            console.log(randomItem);
+            
             }
         
 
@@ -64,6 +102,27 @@ playButton.addEventListener("click", function generaGriglia() {
                 gridItem.addEventListener("click", function selezionata(){
                     this.classList.toggle("selezionata")
                     console.log("cella selezionata:", i)
+
+                    if (this.classList.contains("bomb")){
+                        this.classList.add("esplosa");
+                        
+
+                        
+                        const bombe = document.querySelectorAll('.bomb');
+                        console.log("queste sono le bombe", bombe)
+                        
+                            for (const bomb of bombe) {
+                            bomb.classList.add('esplosa');
+                            }
+
+                            let punteggio = document.querySelectorAll('.selezionata').length - 1;
+                        console.log("hai totalizzato:" + punteggio + "punti");
+
+                        alert(`hai totalizzato: ${punteggio} punti`);
+                        window.location.reload();
+ 
+                    }
+
                 })
                 
                 gridItem.className = "grid_item";
@@ -72,6 +131,24 @@ playButton.addEventListener("click", function generaGriglia() {
                 
 
                 contenitoreGriglia.appendChild(gridItem)
+
+            }
+
+            let celleArray = document.getElementsByClassName("grid_item");
+            console.log(celleArray);
+
+            for (let j = 1; j <= celleArray.length; j++){
+            celleArray.value = [j]
+            }
+            
+            for (let i = 1; i <= 16; i++){
+            var randomItem = celleArray[Math.floor(Math.random()* celleArray.length)];
+            var text  = randomItem.textContent || randomItem.innerText;
+            console.log(text);
+
+            randomItem.classList.add("bomb");
+            console.log(randomItem);
+            
             }
         
     }
@@ -94,6 +171,27 @@ playButton.addEventListener("click", function generaGriglia() {
                 gridItem.addEventListener("click", function selezionata(){
                     this.classList.toggle("selezionata")
                     console.log("cella selezionata:", i)
+
+                    if (this.classList.contains("bomb")){
+                        this.classList.add("esplosa");
+                        
+
+                        
+                        const bombe = document.querySelectorAll('.bomb');
+                        console.log("queste sono le bombe", bombe)
+                        
+                            for (const bomb of bombe) {
+                            bomb.classList.add('esplosa');
+                            }
+
+                            let punteggio = document.querySelectorAll('.selezionata').length - 1;
+                        console.log("hai totalizzato:" + punteggio + "punti");
+
+                        alert(`hai totalizzato: ${punteggio} punti`);
+                        window.location.reload();
+
+                    }
+
                 })
 
                 gridItem.className = "grid_item";
@@ -102,7 +200,24 @@ playButton.addEventListener("click", function generaGriglia() {
                 contenitoreGriglia.appendChild(gridItem)
 
             }
-        
+
+            let celleArray = document.getElementsByClassName("grid_item");
+            console.log(celleArray);
+
+            for (let j = 1; j <= celleArray.length; j++){
+            celleArray.value = [j]
+            }
+            
+            for (let i = 1; i <= 16; i++){
+            var randomItem = celleArray[Math.floor(Math.random()* celleArray.length)];
+            var text  = randomItem.textContent || randomItem.innerText;
+            console.log(text);
+
+            randomItem.classList.add("bomb");
+            console.log(randomItem);
+            
+            }
+            
     }
 
 })
