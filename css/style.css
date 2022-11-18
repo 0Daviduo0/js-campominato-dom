@@ -93,7 +93,7 @@ body{
             width: 800px;
             margin: 50px 0;
             display: grid;
-            outline: var(--DEBUG-borders);
+            /* outline: var(--DEBUG-borders); */
         }
             
             .griglia_facile{
@@ -133,6 +133,10 @@ body{
             .esplosa{
                 background-color: red;
             }
+
+        .no_click{
+            pointer-events: none;
+        }
 
     footer{
         width: 100%;
